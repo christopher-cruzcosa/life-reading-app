@@ -10,10 +10,35 @@ $(function () {
           url: queryUrl,
           method: "GET",
         }).then(function (data) {
-          console.log(data[0].image);
+          // console.log(data[0].image);
           // Log the tarot card data in the console
         });
       });
+    $(document).on("click", ".card-image", function () {
+     
+        // send ajax request for tarot cards
+        $.ajax({
+          type: 'POST',
+          url: 'https://aztro.sameerkumar.website?sign=aries&day=today',
+          success: function (data) {
+              // console.log(data);
+          }
+      });
+      });
+    $(document).on("click", ".card-content", function () {
+        var apiKey = "Jhso00dGJXyVhe33ctHvhvmbXAf2BnacGdVgSpbO"
+        var queryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
+  
+        // send ajax request for tarot cards
+        $.ajax({
+          url: queryUrl,
+          method: "GET",
+        }).then(function (data) {
+          console.log(data);
+          // Log the tarot card data in the console
+        });
+      });
+      
 
 
     // Local storage functions
