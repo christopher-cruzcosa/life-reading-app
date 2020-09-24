@@ -1,7 +1,7 @@
 $(function () {
 
     
-    $(document).on("click", ".btn", function () {
+    $(document).on("click", ".card", function () {
      
         var queryUrl = "https://tarot.howlcode.com/api/v1/cards";
   
@@ -10,7 +10,7 @@ $(function () {
           url: queryUrl,
           method: "GET",
         }).then(function (data) {
-          console.log(data);
+          console.log(data[0].image);
           // Log the tarot card data in the console
         });
       });
@@ -29,7 +29,7 @@ $(function () {
     function render(){
         if (localStorage.getItem('birthday') !== null){
             birthday = localStorage.getItem('birthday');
-            console.log(birthday);
+            // console.log(birthday);
             $('#display-birthday').text(birthday);
         }
     }
