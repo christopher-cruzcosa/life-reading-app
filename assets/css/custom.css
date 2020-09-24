@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+    background-image: url('https://s3.amazonaws.com/psiu/wallpapers/opo0432d/opo0432d_desktop.jpg');
+    background-position: center;
+}
+.top-nav {
+    height: 100px;
+}
+
+.brand-logo {
+    word-wrap: break-word;
+}
+
+#content{
+    background-color: whitesmoke;
+    padding: 2%;
+}
+
+#header {
+    margin: 0 auto;
+}
+
