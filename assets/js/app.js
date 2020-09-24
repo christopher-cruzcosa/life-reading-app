@@ -58,4 +58,23 @@ $(function () {
             $('#display-birthday').text(birthday);
         }
     }
+
+    var cardCount = 3;
+
+    function change_visible () {
+      if (cardCount > 2){
+      $("#fortune").attr("class","row");
+      $("#horoscope").attr("class","row");
+      $("#choiceRow1").attr("class","row hidden");
+      $("#choiceRow2").attr("class","row hidden");
+      $("#page-two-header2").attr("class","hidden");
+      }
+      return;
+
+    };
+
+    change_visible();
+
+    
 });
+

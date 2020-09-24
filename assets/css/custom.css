@@ -396,3 +396,9 @@ body {
   background: hsl(220, 10%, 12%);
   font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
+
+.hidden {
+  display: none;
+
+}
