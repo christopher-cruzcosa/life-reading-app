@@ -44,18 +44,25 @@ $(function () {
     // Local storage functions
     render();
     var birthday;
+    //Re-directs to page two and saves submitted birthday
+    $('#submit-btn').on('click', function(event){
+        event.preventDefault();
+        if($('#dob-input').val() === ""){
+          $('#invalid').text('*Please enter a valid birth date to proceed')
+        } else {
+          localStorage.setItem('birthday', $('#dob-input').val());
+          window.location.href = "https://christopher-cruzcosa.github.io/life-reading-app/fortune.html"
+        };
 
-    $('#test-btn').on('click', function(){
-        console.log('BUTTON CLICKED');
-        localStorage.setItem('birthday', $('#test-input').val());
-        window.location.href = "https://christopher-cruzcosa.github.io/life-reading-app/fortune.html"
+
+       
     })
 
+    //The birthday will whow up here, you can use it to determine what horoscope is displayed
     function render(){
         if (localStorage.getItem('birthday') !== null){
             birthday = localStorage.getItem('birthday');
             // console.log(birthday);
-            $('#display-birthday').text(birthday);
         }
     }
 });
