@@ -1,9 +1,6 @@
 $(function () {
 
-    
-    $(document).on("click", ".card-back", function () {
-     
-        var queryUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
+    var queryUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
         
         // send ajax request for tarot cards
         $.ajax({
@@ -21,9 +18,7 @@ $(function () {
           $("#cardNameFuture").text(data[2].name);
           $("#cardFortuneFuture").text(data[2].summary);
          
-           
         });
-      });
     $(document).on("click", ".card-image", function () {
      
         // send ajax request for tarot cards
