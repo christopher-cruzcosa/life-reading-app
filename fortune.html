@@ -20,7 +20,7 @@
     <!--Cards will be displayed and selected here-->
     <div id="card-choice">
         <div class="container">
-            <div class="row">
+            <div class="row" id="choiceRow1">
                 <div class="tarot-card col s12 m4 l2">
                     <img src="https://www.horoscope.com/images-US/tarot/back/lumina-back.png" alt="tarot card back">
                 </div>
@@ -40,7 +40,7 @@
                     <img src="https://www.horoscope.com/images-US/tarot/back/lumina-back.png" alt="tarot card back">
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="choiceRow2">
                 <div class="tarot-card col s12 m4 l2">
                     <img src="https://www.horoscope.com/images-US/tarot/back/lumina-back.png" alt="tarot card back">
                 </div>
@@ -68,7 +68,7 @@
 
     <!--Tarot reading will be revealed here-->
     <div class="container">
-        <div class="row">
+        <div class="row hidden" id="fortune">
             <div class="col l4">
                 <div class="flip-card-container" style="--hue: 220">
                     <div class="flip-card">
@@ -204,8 +204,9 @@
                 </div>
             </div>
             <!-- /flip-card-container -->
-
-            <div id="horosocope">
+        </div>
+        <div class="row hidden" id="horoscope">
+            <div>
                 <div class="row">
                     <div class="col s12">
                         <h2>Your Horoscope</h2>
