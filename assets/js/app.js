@@ -1,31 +1,27 @@
 $(function () {
 
     
-    $(document).on("click", ".tarot-card", function () {
+    $(document).on("click", ".card-back", function () {
      
         var queryUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
-        // var deckArray = [];
+        
         // send ajax request for tarot cards
         $.ajax({
           url: queryUrl,
           method: "GET",
         }).then(function (data) {
            console.log(data);
-           for (var i = 0; i < 11; i++){
+          
+          $("#cardNamePast").text(data[0].name);
+          $("#cardFortunePast").text(data[0].summary);
 
-          //   var tarotName = $("#card-name")
-          //   var tarotImg = $("#card-image")
-          //   var tarotRev = $("#card-reversed")
-          //   var tarotUpright = $("#card-upright")
-          //   var tarotSum = $("#card-summary")
+          $("#cardNamePresent").text(data[1].name);
+          $("#cardFortunePresent").text(data[1].summary);
 
+          $("#cardNameFuture").text(data[2].name);
+          $("#cardFortuneFuture").text(data[2].summary);
+         
            
-          // $("#card-name").text(data[i].name);
-          // $("#card-image").text(data[i].image);
-          // $("#card-reversed").text(data[i].reversed);
-          // $("#card-upright").text(data[i].upright);
-          // $("#card-summary").text(data[i].summary);
-           }
         });
       });
     $(document).on("click", ".card-image", function () {
