@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
-<body>
-    <nav class="nav top-nav deep-purple darken-4 grey-text lighten-5">
-        <div class="container nav-wrapper valign-wrapper">
-            <a href="#" class="brand-logo center"><i class="material-icons">star_border</i> Professor Mystic</a> 
-        </div>
-    </nav>
+<body id="body-one">
+
     <div id="content" class="container">
-      
+      <div class="row">
+        <div class="col s12">
+          <h1 class="center-align">Fortune Teller</h1>
+        </div>
+      </div>
         <div class="row">
             <div id="header" class="col s12">
                 <p class="description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quibusdam ipsam tempore aut maiores ipsa illum natus! Fugiat minus culpa inventore accusantium temporibus necessitatibus rerum, vitae asperiores beatae quaerat! Ipsa.</p>
@@ -41,7 +41,7 @@
               <div class="col s12 m6 l4">
                 <div class="card">
                   <div class="card-image">
-                    <img src="assets/images/moon.jpg" alt="Nebula">
+                    <img id ="nasa-apod" src="assets/images/moon.jpg" alt="Nebula">
                     <span class="card-title">Phases of the Moon</span>
                   </div>
                   <div class="card-content">
@@ -70,9 +70,9 @@
               <div class="row">
                 <div class="input-field">
                     <p>Enter Your birth date:</p>
+                    <p id="invalid"></p>
                     <input type="date" name="birth-date" id="dob-input">
-                    <button class="green darken-3 waves-effect waves-light btn"><i class="material-icons left">star_border</i>See your fate</button>
-                </div>
+                    <button id="submit-btn" class="purple darken-3 waves-effect waves-light btn">See your fate</button>                </div>
               </div>
             </form>
             <div class="col s12 l4">
