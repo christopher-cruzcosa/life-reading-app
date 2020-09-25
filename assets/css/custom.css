@@ -275,7 +275,6 @@ h1 {
     font-weight: bold;
     /* color: var(--white-1); */
     color: black;
-  
     letter-spacing: 2px;
   
     padding: 9px 20px;
@@ -285,6 +284,9 @@ h1 {
     transition: .3s;
   
     cursor: pointer;
+
+    margin: 0 30%;
+    width: 40%;
   }
   
   button:hover,
