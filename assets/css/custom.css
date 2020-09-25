@@ -47,9 +47,18 @@ h1 {
     margin-top: 100px;
 }
 
-#reading{
+
+#horoscope{
     background-color: whitesmoke;
     padding: 25px;
+}
+
+#horoscope-card{
+    width: 20%;
+}
+
+.horoscope-text{
+    font-size: 18px;
 }
 
 /* .flip-card-container */
