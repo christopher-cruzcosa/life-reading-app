@@ -236,6 +236,9 @@ h1 {
     margin-top: 12px;
     padding-bottom: 12px;
     background-color: black;
+    
+    
+    
   
     font-size: 14px;
     text-align: center;
@@ -434,3 +437,30 @@ body {
   display: none;
 
 }
+
+#cardNamePast {
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: bolder;
+  
+}
+#cardNamePresent {
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: bolder;
+}
+#cardNameFuture {
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: bolder;
+
+}
+/* #cardFortunePast{
+  background-color: black;
+}
+#cardFortunePresent{
+  background-color: black;
+}
+#cardFortuneFuture{
+  background-color: black;
+} */
