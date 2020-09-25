@@ -33,11 +33,15 @@ $(function () {
       type: 'POST',
       url: 'https://aztro.sameerkumar.website?sign=aries&day=today',
       success: function (data) {
-        // console.log(data);
+        console.log(data);
         
         $("#horoscope-title").text(data.compatibility);
 
         $("#horoscope-content").text(data.description);
+
+        $("#horoscope-luckynum").text("Your Lucky Number: " + data.lucky_number);
+
+        $("#horoscope-color").text("Color of the Day: " + data.color);
     
         $("h5").text(data.current_date);
         
