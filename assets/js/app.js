@@ -30,7 +30,7 @@ $(function () {
       type: 'POST',
       url: 'https://aztro.sameerkumar.website?sign=aries&day=today',
       success: function (data) {
-        console.log(data);
+        // console.log(data);
         
         $("#horoscope-title").text(data.compatibility);
 
@@ -45,19 +45,20 @@ $(function () {
       }
     });
   });
-  // $(document).on("click", ".card-content", function () {
-  //   var apiKey = "Jhso00dGJXyVhe33ctHvhvmbXAf2BnacGdVgSpbO"
-  //   var queryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
 
-  //   // send ajax request for tarot cards
-  //   $.ajax({
-  //     url: queryUrl,
-  //     method: "GET",
-  //   }).then(function (data) {
-  //     // console.log(data);
-     
-  //   });
-  // });
+  var apiKey = "Jhso00dGJXyVhe33ctHvhvmbXAf2BnacGdVgSpbO"
+  var nasaQueryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
+
+    // send ajax request for tarot cards
+    $.ajax({
+      url: nasaQueryUrl,
+      method: "GET",
+    }).then(function (data) {
+      console.log(data);
+
+      $("#nasaPic").attr("src",data.url);
+
+  });
 
 
 
