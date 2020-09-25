@@ -18,6 +18,13 @@ $(function () {
     $("#cardNameFuture").text(data[2].name);
     $("#cardFortuneFuture").text(data[2].summary);
 
+    $("#past-img").attr("src",data[0].image);
+    $("#present-img").attr("src",data[1].image);
+    $("#future-img").attr("src",data[2].image);
+            
+    
+    
+    
   });
 
   
