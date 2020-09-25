@@ -28,9 +28,9 @@ $(function () {
       success: function (data) {
         // console.log(data);
         
-        $(".card-title").text(data.compatibility);
+        $("#horoscope-title").text(data.compatibility);
 
-        $(".card-content").text(data.description);
+        $("#horoscope-content").text(data.description);
     
         $("h5").text(data.current_date);
         
