@@ -7,7 +7,7 @@ $(function () {
     url: queryUrl,
     method: "GET",
   }).then(function (data) {
-    console.log(data);
+    // console.log(data);
 
     $("#cardNamePast").text(data[0].name);
     $("#cardFortunePast").text(data[0].summary);
@@ -20,30 +20,36 @@ $(function () {
 
   });
 
-  $(document).on("click", ".card-image", function () {
-
-    // send ajax request for tarot cards
+  
+    // send ajax request for horoscope content
     $.ajax({
       type: 'POST',
       url: 'https://aztro.sameerkumar.website?sign=aries&day=today',
       success: function (data) {
         // console.log(data);
+        
+        $(".card-title").text(data.compatibility);
+
+        $(".card-content").text(data.description);
+    
+        $("h5").text(data.current_date);
+        
       }
     });
   });
-  $(document).on("click", ".card-content", function () {
-    var apiKey = "Jhso00dGJXyVhe33ctHvhvmbXAf2BnacGdVgSpbO"
-    var queryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
+  // $(document).on("click", ".card-content", function () {
+  //   var apiKey = "Jhso00dGJXyVhe33ctHvhvmbXAf2BnacGdVgSpbO"
+  //   var queryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
 
-    // send ajax request for tarot cards
-    $.ajax({
-      url: queryUrl,
-      method: "GET",
-    }).then(function (data) {
-      // console.log(data);
-      // Log the tarot card data in the console
-    });
-  });
+  //   // send ajax request for tarot cards
+  //   $.ajax({
+  //     url: queryUrl,
+  //     method: "GET",
+  //   }).then(function (data) {
+  //     // console.log(data);
+     
+  //   });
+  // });
 
 
 
@@ -98,5 +104,4 @@ $(function () {
   });
 
 
-});
 
