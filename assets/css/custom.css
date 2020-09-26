@@ -43,6 +43,20 @@ h1 {
     color: red;
 }
 
+#submit-btn {
+    width: 55%;
+    margin: 0 22.5%;
+}
+
+.card-image {
+    height: 15rem;
+}
+
+.card-image img{
+    object-fit: cover;
+}
+
+
 #card-choice{
     margin-top: 100px;
 }
@@ -461,7 +475,4 @@ body {
   font-size: 1em;
   font-weight: bolder;
 
-}
-#nasaPic {
-  height: 60%;
 }
