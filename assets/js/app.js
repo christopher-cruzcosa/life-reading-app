@@ -1,6 +1,7 @@
 $(function () {
 
   var queryUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
+  var queryUrlAztro = "https://aztro.sameerkumar.website?sign=" + sign + "&day=today"
 
   // send ajax request for tarot cards
   $.ajax({
@@ -28,7 +29,7 @@ $(function () {
     // send ajax request for horoscope content
     $.ajax({
       type: 'POST',
-      url: 'https://aztro.sameerkumar.website?sign=aries&day=today',
+      url: queryUrlAztro,
       success: function (data) {
         // console.log(data);
         
@@ -64,22 +65,23 @@ $(function () {
 
   // Local storage functions
   render();
-  var birthday;
-  //Re-directs to page two and saves submitted birthday
+  var sign;
+  //Re-directs to page two and saves submitted sign
   $('#submit-btn').on('click', function (event) {
     event.preventDefault();
-    if ($('#dob-input').val() === "") {
-      $('#invalid').text('*Please enter a valid birth date to proceed')
+    if ($('#dob-input').val() === null) {
+      $('#invalid').text('*Please enter an astrological sign to continue')
     } else {
-      localStorage.setItem('birthday', $('#dob-input').val());
+      localStorage.setItem('astroSign', $('#dob-input').val());
       window.location.href = "https://christopher-cruzcosa.github.io/life-reading-app/fortune.html"
     };
+    console.log($('#dob-input').val())
   })
 
-  //The birthday will whow up here, you can use it to determine what horoscope is displayed
+  //The sign will whow up here, you can use it to determine what horoscope is displayed
   function render() {
-    if (localStorage.getItem('birthday') !== null) {
-      birthday = localStorage.getItem('birthday');
+    if (localStorage.getItem('astroSign') !== null) {
+      sign = localStorage.getItem('astroSign');
       // console.log(birthday);
     }
   }
@@ -111,6 +113,11 @@ $(function () {
     change_visible();
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   });
+
+
+  $(document).ready(function() {
+    $('select').material_select();
+});
 
 
 
