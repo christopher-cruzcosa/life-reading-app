@@ -16,7 +16,7 @@ Our team has created a application that allows the user to have their fortune an
 ## Installation:
 
 - The project portfolio can be accessed through https://github.com/christopher-cruzcosa/life-reading-app
-- The site can be accessed through this link...
+- The site can be accessed through https://christopher-cruzcosa.github.io/life-reading-app/
 
 ## Usage:
 
