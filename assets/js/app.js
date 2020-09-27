@@ -1,7 +1,7 @@
 $(function () {
 
   var queryUrl = "https://tarot.howlcode.com/api/v1/spreads/three_cards";
-  var queryUrlAztro = "https://aztro.sameerkumar.website?sign=" + sign + "&day=today"
+ 
 
   // send ajax request for tarot cards
   $.ajax({
@@ -27,13 +27,13 @@ $(function () {
 
   
     // send ajax request for horoscope content
-    $.ajax({
+  $.ajax({
       type: 'POST',
-      url: queryUrlAztro,
+      url: "https://aztro.sameerkumar.website?sign=aries&day=today",
       success: function (data) {
-        // console.log(data);
+        console.log(data);
         
-        $("#horoscope-title").text(data.compatibility);
+        $("#horoscope-title").text("You have a strong connection with the " + data.compatibility + " sign today");
 
         $("#horoscope-content").text(data.description);
 
@@ -46,6 +46,16 @@ $(function () {
       }
     });
   });
+  // function horoscopePic () {
+  //   if ($('#dob-input').val() === )
+  // };
+
+
+
+
+
+
+
 
   var apiKey = "Jhso00dGJXyVhe33ctHvhvmbXAf2BnacGdVgSpbO"
   var nasaQueryUrl = "https://api.nasa.gov/planetary/apod?api_key=" + apiKey;
@@ -55,7 +65,7 @@ $(function () {
       url: nasaQueryUrl,
       method: "GET",
     }).then(function (data) {
-      console.log(data);
+      // console.log(data);
 
       $("#nasaPic").attr("src",data.url);
 
@@ -75,7 +85,7 @@ $(function () {
       localStorage.setItem('astroSign', $('#dob-input').val());
       window.location.href = "https://christopher-cruzcosa.github.io/life-reading-app/fortune.html"
     };
-    console.log($('#dob-input').val())
+    // console.log($('#dob-input').val())
   })
 
   //The sign will whow up here, you can use it to determine what horoscope is displayed
