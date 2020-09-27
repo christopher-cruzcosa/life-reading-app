@@ -76,8 +76,8 @@ h1 {
 }
 
 #horoscope{
-    background-color: whitesmoke;
-    padding: 25px;
+    background-color: transparent;
+    padding: 15px;
 }
 
 #horoscope-card{
