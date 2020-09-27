@@ -48,11 +48,11 @@ h1 {
     margin: 0 22.5%;
 }
 
-.card-image {
+.card-image-page-one {
     height: 15rem;
 }
 
-.card-image img{
+.card-image-page-one img{
     object-fit: cover;
 }
 
@@ -61,6 +61,12 @@ h1 {
     margin-top: 100px;
 }
 
+#fortune{
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+  right: 50px;
+}
 
 .fortune-text {
     text-align: center;
@@ -81,7 +87,7 @@ h1 {
 }
 
 #horoscope-card{
-    width: 20%;
+    width: 20rem;
 }
 
 .horoscope-text{
@@ -100,8 +106,8 @@ h1 {
   
     width: 310px;
     height: 500px;
-    margin: 40px;
-  
+    margin: 40px auto 0px;
+
     perspective: 1000px;
   }
   
@@ -428,3 +434,4 @@ body {
   font-weight: bolder;
 
 }
+
