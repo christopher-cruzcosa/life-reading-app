@@ -30,8 +30,11 @@ h1 {
     height: 100px;
 }
 
-.brand-logo {
-    word-wrap: break-word;
+
+
+#logo {
+    width: 70%;
+    margin: 0 15%;
 }
 
 #content{
